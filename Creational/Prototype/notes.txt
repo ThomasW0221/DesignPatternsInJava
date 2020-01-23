@@ -1,0 +1,35 @@
+Concepts:
+Avoids costly created
+
+Avoids subclassing
+
+Typically does not use 'new' keyword
+
+often initializes an interface for prototype instance
+
+usually implemented with a registry -> original object is created then kept in registry, when another object is needed
+we create a clone of object from registry
+
+Design Considerations:
+avoids keyword new
+
+typically implements clone/cloneable interface
+
+althought its a copy,each instance is unique
+
+can still utilize parameters for construction
+
+shallow -> copy immediate properties, deep -> any object references as well are copied into new instances
+
+shallow copies can be dangerous cuz you could modify same reference from 2 locations
+
+Pitfalls:
+not really clear when to use (opposite of singleton, where people overuse)
+often used with other patterns (registry)
+cloneable interface only does shallow copies
+
+Summary:
+guarantee unique object instance
+often refactored in later in app
+can help with object creation performance
+dont always jump to factory pattern, see if prototype can solve the same problem
