@@ -1,0 +1,27 @@
+Concepts:
+factory of factories
+factory of related objects
+shares a common interface
+defers to a subclass
+very common in frameworks
+
+Design Considerations:
+group a collection of factories together
+factory is still responsible for lifecycle itself
+has common interface
+concrete classes that are returned from factory
+parameterized
+built using composition
+
+Pitfalls:
+Complexity
+runtime switch, client can have some degree of influence
+pattern within a pattern
+problem specific
+starts off as a factory and then gets refactored into abstract factory
+
+Summary:
+group of similar factories
+complex
+heavily abstracted
+technically a framework pattern, usually built as part of larger framework inside of our code
