@@ -1,0 +1,22 @@
+Concepts:
+doesn't expose instantiation logic
+client knows nothing about even type of object being created(?)
+defers instantiation to subclass
+utilizes a common interface
+specified by architecture, implemented by user
+
+Design Considerations:
+Factory is responsible for lifecycle (creation part at least)
+referenced through common interface
+utilizes concrete classes but client is unaware of them typically
+parameterized create method (used to determine concrete type)
+
+Pitfalls:
+Complexity, requires a lot of code
+people get wrong the fact that creation doesn't take place in factory itself, but rather in subclass of type we are
+    creating
+Sort of need to design this from the ground up, hard to refactor into
+
+Summary:
+Parameter driven
+solves complex creation
